@@ -1,5 +1,21 @@
-@import './base.css';
+/* @import './base.css'; */
 
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+}
+/* 
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -32,4 +48,4 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
-}
+} */
