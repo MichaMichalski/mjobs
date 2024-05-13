@@ -1,17 +1,30 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
   <div class="wrapper">
 
     <nav>
-      <RouterLink class="logoHeader" to="/">LogoHeader</RouterLink>
-      <RouterLink class="logo" to="/">Logo</RouterLink>
-      <div>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+      <div class="navbar">
+        <div class="navbar-left">
+          <RouterLink class="logo" to="/test">
+            <img src="@/assets/MJobs_chars_nobg.svg" alt="">
+          </RouterLink>
+          <RouterLink class="logoHeader" to="/test">
+            <img src="@/assets/MJobs_logoheader_nobg.svg" alt="">
+          </RouterLink>
+          <div class="navbuttons">
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
+          </div>
+        </div>
+        <div class="navbar-right">
+          <div class="navbuttons">
+            <RouterLink class="signin" to="/">Sign in</RouterLink>
+            <RouterLink to="/test">Employers/Post Job</RouterLink>
+          </div>
+        </div>
       </div>
     </nav>
   </div>
@@ -24,17 +37,78 @@ a, a:visited, a:hover, a:focus, a:active, a:link {
   color: #2d2d2d;
 }
 nav {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+div.navbar {
   display: flex;
-  max-height: 4.5rem;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  min-height: 3.25rem;
+  background-color: #ffffff;
+  justify-content: space-between;
+  border-bottom-width: 0.0625rem;
+  border-bottom-color: #e4e2e0;
+  border-bottom-style: solid;
+}
+
+div.navbar-left {
+  display: flex;
   align-items: center;
-  color: rgb(#2d2d2d);
+  box-sizing: border-box;
+  min-width: 0;
+  flex-wrap: wrap;
+  max-height: 3.25rem;
+  overflow: hidden;
+  border-bottom: 0.125rem solid transparent;
 }
 
-nav a {
+div.navbar-right {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+div.navbar-right a.signin {
+  margin-right: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+div.navbuttons {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
   height: 100%;
+  min-width: 0;
+  border-bottom: 0.125rem solid transparent;
+}
+div.navbuttons a {
+  margin-right: 1.5rem;
+  border-bottom: 0.125rem solid transparent;
+}
+.navbar a {
+  color: #2d2d2d;
+
+}
+nav div a:hover {
+  border-bottom: 0.125rem solid blue;
+  
+}
+nav div a.router-link-active {
+  border-bottom: 0.125rem solid blue;
 }
 
-nav a.logoHeader {
+.logo {
   margin: 0;
   margin-right: 0;
   padding-left: 1.5rem;
@@ -44,26 +118,18 @@ nav a.logoHeader {
   width: 7rem;
 }
 
-nav a.logo {
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.logoHeader {
   margin-right: 1.5rem;
 }
 
-nav div {
-  height: 100%;
-}
-
-nav div a {
-  flex: 1;
-  height: 100%;
-  padding-bottom: 1.5rem;
-  margin-right: 1.5rem;
-}
-nav div a:hover {
-  border-bottom: 0.125rem solid blue;
-  
-}
-nav div a.router-link-active {
-  border-bottom: 0.125rem solid blue;
+.logoHeader img {
+  width: 100%;
+  height: auto;
 }
 </style>
 
