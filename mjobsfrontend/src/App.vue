@@ -8,9 +8,9 @@ import { RouterLink, RouterView } from 'vue-router'
     <nav>
       <div class="navbar">
         <div class="navbar-left">
-          <RouterLink class="logo" to="/test">
+          <router-link class="logo" tag="div" to="/test">
             <img src="@/assets/MJobs_chars_nobg.svg" alt="">
-          </RouterLink>
+          </router-link>
           <RouterLink class="logoHeader" to="/test">
             <img src="@/assets/MJobs_logoheader_nobg.svg" alt="">
           </RouterLink>
@@ -36,6 +36,7 @@ a, a:visited, a:hover, a:focus, a:active, a:link {
   text-decoration: none;
   color: #2d2d2d;
 }
+
 nav {
   display: block;
   unicode-bidi: isolate;
@@ -100,36 +101,40 @@ div.navbuttons a {
   color: #2d2d2d;
 
 }
-nav div a:hover {
+nav div a:hover:not(.logo, .logoHeader) {
   border-bottom: 0.125rem solid blue;
-  
 }
 nav div a.router-link-active {
   border-bottom: 0.125rem solid blue;
 }
 
 .logo {
-  margin: 0;
-  margin-right: 0;
-  padding-left: 1.5rem;
-  padding-right: 0.75rem;
-  padding-top: 1.375rem;
-  padding-bottom: 1.375rem;
+  display: flex;
+  align-items: center;
   width: 7rem;
+  border-bottom: 0.125rem solid transparent;
 }
 
 .logo img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  margin: auto;
 }
 
 .logoHeader {
-  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  width: 7rem;
+  height: 100%;
+  border-bottom: 0.125rem solid transparent;
 }
 
 .logoHeader img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: scale-down;
+  overflow: hidden;
+  margin: auto;
 }
 </style>
 
