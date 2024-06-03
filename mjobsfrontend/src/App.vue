@@ -4,35 +4,69 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <div class="wrapper">
-
-    <nav>
-      <div class="navbar">
-        <div class="navbar-left">
-          <router-link class="logo" tag="div" to="/test">
-            <img src="@/assets/MJobs_chars_nobg.svg" alt="">
-          </router-link>
-          <RouterLink class="logoHeader" to="/test">
-            <img src="@/assets/MJobs_logoheader_nobg.svg" alt="">
-          </RouterLink>
-          <div class="navbuttons">
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/about">About</RouterLink>
+    <nav class="bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between">
+        <div class="flex space-x-4">
+          <!-- Logo -->
+          <div>
+            <a href="#" class="flex items-center py-5 px-2 text-gray-700">
+              <img src="https://de.indeed.com/static/images/logo.svg" alt="Indeed Logo" class="h-8 w-8 mr-2">
+              <span class="font-bold">Indeed</span>
+            </a>
+          </div>
+          <!-- Primary Nav -->
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Stellenanzeigen durchsuchen</a>
+            <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Unternehmensbewertungen</a>
+            <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Gehälter finden</a>
+            <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Anmelden</a>
           </div>
         </div>
-        <div class="navbar-right">
-          <div class="navbuttons">
-            <RouterLink class="signin" to="/">Sign in</RouterLink>
-            <RouterLink to="/test">Employers/Post Job</RouterLink>
-          </div>
+        <!-- Secondary Nav -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="#" class="py-2 px-3 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-300">Lebenslauf anlegen</a>
+        </div>
+        <!-- Mobile button -->
+        <div class="md:hidden flex items-center">
+          <button @click="toggleMenu" class="mobile-menu-button">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
         </div>
       </div>
-    </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <div :class="{'hidden': !isMenuOpen}" class="mobile-menu md:hidden">
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Stellenanzeigen durchsuchen</a>
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Unternehmensbewertungen</a>
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Gehälter finden</a>
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Anmelden</a>
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Lebenslauf anlegen</a>
+    </div>
+  </nav>
   </div>
   <RouterView />
 </template>
 
+<script lang="ts">
+export default {
+  data() {
+    return {
+      isMenuOpen: false
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    }
+  }
+}
+</script>
+
 <style scoped>
-a, a:visited, a:hover, a:focus, a:active, a:link {
+/* a, a:visited, a:hover, a:focus, a:active, a:link {
   text-decoration: none;
   color: #2d2d2d;
 }
@@ -135,7 +169,7 @@ nav div a.router-link-active {
   object-fit: scale-down;
   overflow: hidden;
   margin: auto;
-}
+} */
 </style>
 
 <!-- <style scoped>
