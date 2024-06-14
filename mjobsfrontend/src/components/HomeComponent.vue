@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HomeNavComponent from './HomeNavComponent.vue'
+import HomeNavComponent from './navbar/HomeNavComponent.vue'
 </script>
 
 <template>

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import LocaleChanger from './LocaleChanger.vue';
 const props = defineProps([
   'isMenuOpen'
 ])
