@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-4xl mx-auto mt-10">
+  <div class="bg-gray-100 dark:bg-slate-800 p-6 rounded-lg shadow-md max-w-4xl mx-auto mt-10">
     <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
       <div class="w-full md:w-1/2">
         <label class="block text-gray-700 text-sm font-bold mb-2 text-center md:text-left" for="job-title">

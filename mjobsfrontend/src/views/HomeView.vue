@@ -4,8 +4,9 @@ import JobSearch from '../components/JobSearch.vue'
 </script>
 
 <template>
-  <main>
+  <main class="bg-mybg">
     <HomeComponent />
+    <JobSearch />
   </main>
-  <JobSearch />
+  
 </template>
