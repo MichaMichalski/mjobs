@@ -47,7 +47,8 @@ jobs:
         #   # Used to specify the path to a dependency file: package-lock.json, yarn.lock, etc. Supports wildcards or a list of file names for caching multiple dependencies.
         #   cache-dependency-path: # optional
       - name: Build frontend
-        run: cd mjobsfrontend && npm run build
+        # run: cd mjobsfrontend && npm run build
+        run: echo $(ls)
           
       - name: Checkout
         uses: actions/checkout@v4
