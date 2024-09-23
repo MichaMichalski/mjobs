@@ -49,15 +49,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build frontend
-        # working-directory: ./mjobsfrontend
+        working-directory: ./mjobsfrontend
         # run: npm run build
         run: |
-          echo $(pwd)
-          echo $(ls)
-          echo $(ls ..)
-          echo $(ls ../..)
-          cd mjobsfrontend
-          npm install && npm run build
+          npm install
+          npm run build
           
       - name: Setup Pages
         uses: actions/configure-pages@v5
