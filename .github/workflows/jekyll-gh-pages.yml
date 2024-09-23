@@ -57,7 +57,7 @@ jobs:
           echo $(ls ..)
           echo $(ls ../..)
           cd mjobsfrontend
-          npm run build
+          npm install && npm run build
           
       - name: Setup Pages
         uses: actions/configure-pages@v5
