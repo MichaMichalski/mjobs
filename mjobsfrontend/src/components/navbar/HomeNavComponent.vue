@@ -28,7 +28,7 @@ function toggleMenu() {
           <!-- Logo -->
           <div>
           <a href="#" class="flex items-center py-5 px-2 text-mycontent">
-              <img src="../../assets/Mjobs.png" alt="Mjobs Logo" class="object-contain h-8 w-24 mr-2 min-w-24">
+              <img src="../../assets/MJobs.png" alt="Mjobs Logo" class="object-contain h-8 w-24 mr-2 min-w-24">
           </a>
           </div>
           <!-- Primary Nav -->
