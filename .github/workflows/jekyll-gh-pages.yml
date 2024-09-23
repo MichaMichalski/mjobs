@@ -49,7 +49,10 @@ jobs:
       - name: Build frontend
         # working-directory: ./mjobsfrontend
         # run: npm run build
-        run: echo $(pwd)
+        run: |
+          echo $(pwd)
+          echo $(ls)
+          echo $(ls ..)
           
       - name: Checkout
         uses: actions/checkout@v4
