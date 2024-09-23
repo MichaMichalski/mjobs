@@ -53,6 +53,7 @@ jobs:
           echo $(pwd)
           echo $(ls)
           echo $(ls ..)
+          echo $(ls ../..)
           
       - name: Checkout
         uses: actions/checkout@v4
