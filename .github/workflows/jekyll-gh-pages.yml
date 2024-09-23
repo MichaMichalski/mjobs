@@ -59,13 +59,13 @@ jobs:
           echo $(pwd)
           echo $(ls)
           echo $(ls ..)
-          
+          echo $(ls ../..)
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./mjobsfrontend/dist/
+          source: ./
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
