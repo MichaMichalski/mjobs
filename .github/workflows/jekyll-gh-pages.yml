@@ -26,8 +26,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4.0.4
+      # - name: Setup Node.js environment
+      #   uses: actions/setup-node@v4.0.4
         # with:
         #   node-version: # optional
         #   # File containing the version Spec of the version to use.  Examples: package.json, .nvmrc, .node-version, .tool-versions.
@@ -48,19 +48,19 @@ jobs:
         #   cache-dependency-path: # optional
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build frontend
-        working-directory: ./mjobsfrontend
-        # run: npm run build
-        run: |
-          npm install
-          npm run build
+      # - name: Build frontend
+      #   working-directory: ./mjobsfrontend
+      #   # run: npm run build
+      #   run: |
+      #     npm install
+      #     npm run build
           
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: ./mjobsfrontend/dist/
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
