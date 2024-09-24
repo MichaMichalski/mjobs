@@ -12,3 +12,4 @@ git add mjobsfrontend/dist -f
 git commit -m "adding dist"
 git subtree push --prefix mjobsfrontend/dist origin gh-pages
 ```
+Frontend should be available at `https://michamichalski.github.io/mjobs/`
