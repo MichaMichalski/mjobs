@@ -15,6 +15,7 @@ const fullReloadAlways: PluginOption = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/mjobs/',
   plugins: [
     vue(),
     vueJsx(),
